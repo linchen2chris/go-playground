@@ -1,4 +1,4 @@
-package echo
+package main
 
 import (
 	"fmt"
@@ -6,11 +6,9 @@ import (
 )
 
 func main() {
-	var s, sep string
-	for i := 0; i < len(os.Args); i++ {
-		s += sep + os.Args[i]
-		sep = " "
+	for n, arg := range os.Args {
+		fmt.Println(n, " ", arg)
 	}
-	fmt.Println(s)
+	// fmt.Println(strings.Join(os.Args, "-"))
 
 }
